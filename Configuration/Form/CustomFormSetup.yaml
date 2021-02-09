@@ -1,0 +1,17 @@
+imports:
+- { resource: "./FormElements/GridRow.yaml" }
+
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                templateRootPaths:
+                  20: 'EXT:tailwindcss_form/Resources/Private/Templates/Frontend/'
+                partialRootPaths:
+                  20: 'EXT:tailwindcss_form/Resources/Private/Partials/Frontend/'
+                layoutRootPaths:
+                  20: 'EXT:tailwindcss_form/Resources/Private/Layouts/Frontend/'

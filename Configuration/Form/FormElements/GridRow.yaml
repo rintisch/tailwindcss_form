@@ -1,0 +1,26 @@
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          formElementsDefinition:
+            GridRow:
+              properties:
+                elementClassAttribute: flex
+                gridColumnClassAutoConfiguration:
+                  gridSize: 12
+                  viewPorts:
+                    xs:
+                      classPattern: 'sm:w-1/{@numbersOfColumnsToUse}'
+                    sm:
+                      classPattern: 'md:w-1/{@numbersOfColumnsToUse}'
+                    md:
+                      classPattern: 'lg:w-1/{@numbersOfColumnsToUse}'
+                    lg:
+                      classPattern: 'xl:w-1/{@numbersOfColumnsToUse}'
+              renderingOptions:
+                _isCompositeFormElement: true
+                _isGridRowFormElement: true
+          formEditor:
+            formEditorPartials:
+              FormElement-GridRow: Stage/Fieldset
