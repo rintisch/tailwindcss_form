@@ -1,17 +1,22 @@
 {
-    "name": "rintisch/tailwindcss-form",
-    "type": "typo3-cms-extension",
-    "description": "Adapt output of EXT:form for usage with tailwindcs",
-    "homepage": "https://github.com/rintisch/",
-    "license": ["GPL-2.0-or-later"],
-    "keywords": ["TYPO3 CMS"],
-    "require": {
-        "typo3/cms-core": "^10.2",
-        "typo3/form": "^10.2",
-    },
-    "autoload": {
-        "psr-4": {
-            "Rintisch\\TailwindcssForm\\": "Classes/"
-        }
+  "name": "rintisch/tailwindcss-form",
+  "type": "typo3-cms-extension",
+  "version": "1.0.0",
+  "description": "Adapt output of EXT:form for usage with tailwindcs",
+  "homepage": "https://github.com/rintisch/",
+  "license": [
+    "GPL-2.0-or-later"
+  ],
+  "keywords": [
+    "TYPO3 CMS"
+  ],
+  "require": {
+    "typo3/cms-core": "^10.2",
+    "typo3/form": "^10.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Rintisch\\TailwindcssForm\\": "Classes/"
     }
+  }
 }
