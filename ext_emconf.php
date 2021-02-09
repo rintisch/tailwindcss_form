@@ -20,7 +20,7 @@ $EM_CONF[$_EXTKEY] = [
             'Rintisch\\TailwindcssForm\\' => 'Classes',
         ],
     ],
-    'state' => 'beta',
+    'state' => 'stable',
     'uploadfolder' => 0,
     'createDirs' => '',
     'clearCacheOnLoad' => 1,
