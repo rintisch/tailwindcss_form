@@ -6,18 +6,20 @@ TYPO3:
           formElementsDefinition:
             GridRow:
               properties:
-                elementClassAttribute: flex
+                elementClassAttribute: flex flex-col md:flex-row
+                gridXGutter: 4
+                gridYGutter: mb-8
                 gridColumnClassAutoConfiguration:
                   gridSize: 12
                   viewPorts:
                     xs:
-                      classPattern: 'sm:w-1/{@numbersOfColumnsToUse}'
+                      classPattern: 'sm:w-{@numbersOfColumnsToUse}'
                     sm:
-                      classPattern: 'md:w-1/{@numbersOfColumnsToUse}'
+                      classPattern: 'md:w-{@numbersOfColumnsToUse}'
                     md:
-                      classPattern: 'lg:w-1/{@numbersOfColumnsToUse}'
+                      classPattern: 'lg:w-{@numbersOfColumnsToUse}'
                     lg:
-                      classPattern: 'xl:w-1/{@numbersOfColumnsToUse}'
+                      classPattern: 'xl:w-{@numbersOfColumnsToUse}'
               renderingOptions:
                 _isCompositeFormElement: true
                 _isGridRowFormElement: true

@@ -1,5 +1,6 @@
 imports:
 - { resource: "./FormElements/GridRow.yaml" }
+- { resource: "./FormElements/Textarea.yaml" }
 
 TYPO3:
   CMS:

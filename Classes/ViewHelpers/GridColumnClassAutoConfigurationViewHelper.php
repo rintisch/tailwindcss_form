@@ -105,6 +105,7 @@ class GridColumnClassAutoConfigurationViewHelper extends AbstractViewHelper
         $classes = [];
         foreach ($gridViewPortConfiguration['viewPorts'] as $viewPortName => $configuration) {
             if (isset($usedColumns[$viewPortName]['concreteNumbersOfColumnsToUse'])) {
+                // here is an adaption
                 $numbersOfColumnsToUse = $gridSize / $usedColumns[$viewPortName]['concreteNumbersOfColumnsToUse'];
             } else {
                 $restColumnsToDivide = $gridSize - $usedColumns[$viewPortName]['sum'];
@@ -116,8 +117,11 @@ class GridColumnClassAutoConfigurationViewHelper extends AbstractViewHelper
                 if ($restElements < 1) {
                     $restElements = 1;
                 }
+                // here is an adaption
                 $numbersOfColumnsToUse = $gridSize / floor($restColumnsToDivide / $restElements);
             }
+            // here is an adaption
+            $numbersOfColumnsToUse = (int)$numbersOfColumnsToUse === 1 ? 'full' : '1/' . (string)$numbersOfColumnsToUse;
 
             $classes[] = str_replace(
                 '{@numbersOfColumnsToUse}',
