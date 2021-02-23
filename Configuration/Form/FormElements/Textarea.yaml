@@ -6,4 +6,5 @@ TYPO3:
           formElementsDefinition:
             Textarea:
               properties:
+                containerClassAttribute: input mb-8
                 elementClassAttribute: h-48
