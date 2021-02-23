@@ -1,0 +1,30 @@
+.control-label {
+  @apply font-sans text-sm;
+}
+
+input,
+textarea {
+  @apply text-base text-gray-900;
+}
+
+.table-responsive {
+  @apply text-lg mb-8;
+
+  tr {
+    &:nth-child(odd) {
+      @apply bg-gray-100 bg-opacity-25;
+    }
+  }
+
+  td {
+    @apply p-2;
+  }
+}
+
+.summary-table-first-col {
+  @apply uppercase pr-8 text-base opacity-75;
+}
+
+legend {
+  @apply mb-4;
+}
