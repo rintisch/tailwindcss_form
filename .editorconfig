@@ -53,12 +53,12 @@ indent_size = 3
 # TypoScript
 [*.typoscript]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 # YML-Files
 [{*.yml,*.yaml}]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 # package.json, composer.json or .travis.yml
 [{package.json,composer.json,.travis.yml}]
