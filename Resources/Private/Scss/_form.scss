@@ -1,10 +1,29 @@
 .control-label {
-  @apply font-sans text-sm;
+  @apply font-sans text-base;
 }
 
-input,
-textarea {
-  @apply text-base text-gray-900;
+[type="text"],
+[type="email"],
+[type="url"],
+[type="password"],
+[type="number"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="search"],
+[type="tel"],
+[type="time"],
+[type="week"],
+[multiple],
+textarea,
+select {
+  @apply text-base text-gray-800 border border-gray-300 rounded-sm;
+}
+
+select {
+  >option {
+    @apply font-body;
+  }
 }
 
 .table-responsive {
@@ -27,4 +46,53 @@ textarea {
 
 legend {
   @apply mb-4;
+}
+
+.form-group + .form-group,
+input + .form-group {
+  @apply mt-6;
+}
+
+.form-row + .form-row {
+  @apply mt-24;
+}
+
+.step-indicator {
+  list-style: none;
+  counter-reset: step-number;
+
+  li {
+    counter-increment: step-number;
+
+    &:before {
+      content: counter(step-number);
+      right: 100%;
+      line-height: 2.0;
+      @apply absolute bg-primary-400 font-sans text-white rounded-full text-xs -ml-8 h-6 w-6 text-center opacity-50;
+    }
+
+    &.active {
+      @apply font-semibold;
+
+      &:before {
+        @apply bg-primary-500 opacity-75;
+
+      }
+    }
+  }
+}
+
+.help-block {
+  @apply text-sm font-sans text-gray-700;
+}
+
+.error {
+  &.help-block {
+    @apply text-red-800 relative;
+
+    &:before {
+      content: '⚠';
+      right: 100%;
+    }
+  }
 }

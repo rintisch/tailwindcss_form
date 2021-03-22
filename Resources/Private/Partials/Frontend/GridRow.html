@@ -3,7 +3,7 @@
 <formvh:renderRenderable renderable="{element}">
     <f:variable name="gridXGutter">{f:if(condition: '{element.properties.gridXGutter}', then: '{element.properties.gridXGutter} ', else: '0 ')}</f:variable>
     <f:variable name="gridYGutter">{f:if(condition: '{element.properties.gridYGutter}', then: ' {element.properties.gridYGutter} ', else: '')}</f:variable>
-    <div class="-mx-{gridXGutter}{gridYGutter}{f:if(condition: element.properties.elementClassAttribute, then: '{element.properties.elementClassAttribute}')}">
+    <div class="form-row -mx-{gridXGutter}{gridYGutter}{f:if(condition: element.properties.elementClassAttribute, then: '{element.properties.elementClassAttribute}')}">
         <f:for each="{element.elements}" as="element">
             <div class="px-{gridXGutter}{tailwind:gridColumnClassAutoConfiguration(element: element)}">
                 <f:render partial="{element.templateName}" arguments="{element: element}" />
