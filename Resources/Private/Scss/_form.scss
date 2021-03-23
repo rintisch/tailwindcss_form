@@ -30,9 +30,7 @@ select {
   @apply text-lg mb-8;
 
   tr {
-    &:nth-child(odd) {
-      @apply bg-gray-100 bg-opacity-25;
-    }
+    @apply border-b border-gray-200;
   }
 
   td {
@@ -41,7 +39,7 @@ select {
 }
 
 .summary-table-first-col {
-  @apply uppercase pr-8 text-base opacity-75;
+  @apply pr-8 opacity-75;
 }
 
 legend {
@@ -76,7 +74,6 @@ input + .form-group {
 
       &:before {
         @apply bg-primary-500 opacity-75;
-
       }
     }
   }
@@ -95,4 +92,16 @@ input + .form-group {
       right: 100%;
     }
   }
+}
+
+[type="checkbox"], [type="radio"] {
+  @apply text-primary-500;
+}
+
+[type="checkbox"] {
+  @apply h-4 w-4 border rounded-sm border-gray-400 mr-1 mt-2;
+}
+
+.form-check-label {
+  @apply flex flex-row items-baseline;
 }
