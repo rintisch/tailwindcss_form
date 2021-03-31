@@ -19,10 +19,13 @@ class StepIndicator
             $formPages = $formDefinition->getPages();
             $pageArray = [];
             /** @var Page $formPage */
+            if (count($formPages) === 1) {
+                return;
+            }
             foreach ($formPages as $formPage) {
                 $pageStep['label'] = $formPage->getLabel();
 
-                if($formPage->getIdentifier() === $renderable->getIdentifier()){
+                if ($formPage->getIdentifier() === $renderable->getIdentifier()) {
                     $pageStep['isActive'] = 1;
                 } else {
                     $pageStep['isActive'] = 0;
@@ -31,6 +34,7 @@ class StepIndicator
                 $pageArray[] = $pageStep;
             }
             $renderable->setRenderingOption('stepIndicator', $pageArray);
+
         }
     }
 }

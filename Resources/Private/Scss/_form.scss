@@ -2,6 +2,10 @@
   @apply font-sans text-base;
 }
 
+.input {
+  @apply flex flex-col;
+}
+
 [type="text"],
 [type="email"],
 [type="url"],
@@ -65,8 +69,8 @@ input + .form-group {
     &:before {
       content: counter(step-number);
       right: 100%;
-      line-height: 2.0;
       @apply absolute bg-primary-400 font-sans text-white rounded-full text-xs -ml-8 h-6 w-6 text-center opacity-50;
+      line-height: 2.0;
     }
 
     &.active {
