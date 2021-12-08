@@ -2,10 +2,10 @@
 <formvh:renderRenderable renderable="{element}">
     <div class="clearfix">
         <f:if condition="{element.label}">
-            <h3 class="text-xl">{formvh:translateElementProperty(element: element, property: 'label')}</h3>
+            <h3 class="text-xl mt-0">{formvh:translateElementProperty(element: element, property: 'label')}</h3>
         </f:if>
         <f:if condition="{element.properties.text}">
-            <p class="font-sans text-gray-700 mt-2 text-sm{f:if(condition: element.properties.elementClassAttribute, then: ' {element.properties.elementClassAttribute}')}">{formvh:translateElementProperty(element: element, property: 'text') -> f:format.nl2br()}</p>
+            <p class="font-sans text-gray-800 mt-2 max-w-xl text-base{f:if(condition: element.properties.elementClassAttribute, then: ' {element.properties.elementClassAttribute}')}">{formvh:translateElementProperty(element: element, property: 'text') -> f:format.nl2br()}</p>
         </f:if>
     </div>
 </formvh:renderRenderable>

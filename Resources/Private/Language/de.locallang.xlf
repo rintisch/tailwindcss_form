@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="EXT:tailwindcss_form/Resources/Private/Language/locallang" product-name="tailwindcss_form">
+        <header/>
+        <body>
+            <trans-unit id="uploaded-file">
+                <source>Uploaded file</source>
+                <target>Hochgeladene Datei</target>
+            </trans-unit>
+            <trans-unit id="no-file-chosen">
+                <source>No file chosen</source>
+                <target>Keine Datei ausgewählt</target>
+            </trans-unit>
+            <trans-unit id="upload-file">
+                <source>Upload file</source>
+                <target>Datei hochladen</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
