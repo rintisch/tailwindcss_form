@@ -1,0 +1,38 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers"
+    xmlns:e="http://typo3.org/ns/Ssch\Typo3Encore\ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+<e:renderWebpackScriptTags entryName="form" position="footer"/>
+
+<formvh:renderRenderable renderable="{element}">
+    <div data-file-upload-container>
+        <f:render partial="Field/Field" arguments="{element: element}" contentAs="elementContent">
+            <formvh:form.uploadedResource
+                property="{element.identifier}"
+                as="resource"
+                id="{element.uniqueIdentifier}"
+                class="{element.properties.elementClassAttribute}"
+                errorClass="{element.properties.elementErrorClassAttribute}"
+                additionalAttributes="{formvh:translateElementProperty(element: element, property: 'fluidAdditionalAttributes')}"
+                accept="{element.properties.allowedMimeTypes}"
+            >
+                <f:if condition="{resource}">
+
+                    <strong>{f:translate(id: "uploaded-file", extensionName: 'tailwindcss_form')}</strong>
+                    <div id="{element.uniqueIdentifier}-preview">
+                        {resource.originalResource.originalFile.name}
+                    </div>
+                </f:if>
+            </formvh:form.uploadedResource>
+            <div data-file-upload-fake class="file-upload-fake file-upload-fake--hidden">
+                <div class="selection">{f:translate(id: "no-file-chosen", extensionName: 'tailwindcss_form')}</div>
+                <div class="btn btn-secondary btn-circle btn-outline">
+                    <span>{f:translate(id: "upload-file", extensionName: 'tailwindcss_form')}</span>
+                </div>
+            </div>
+        </f:render>
+    </div>
+</formvh:renderRenderable>
+</html>

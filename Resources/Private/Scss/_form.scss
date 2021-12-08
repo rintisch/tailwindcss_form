@@ -1,5 +1,11 @@
+form {
+  > * + * {
+    @apply mt-8;
+  }
+}
+
 .control-label {
-  @apply font-sans text-base;
+  @apply font-sans text-base mb-2;
 }
 
 .input {
@@ -21,7 +27,7 @@
 [multiple],
 textarea,
 select {
-  @apply text-base text-gray-800 border border-gray-300 rounded-sm;
+  @apply text-base text-gray-800 border border-gray-300 rounded-sm max-w-xl;
 }
 
 select {
@@ -55,6 +61,12 @@ input + .form-group {
   @apply mt-6;
 }
 
+.form-group {
+  > * + * {
+    @apply mt-2;
+  }
+}
+
 .form-row + .form-row {
   @apply mt-24;
 }
@@ -84,7 +96,7 @@ input + .form-group {
 }
 
 .help-block {
-  @apply text-sm font-sans text-gray-700;
+  @apply text-sm text-gray-800 font-sans max-w-xl;
 }
 
 .error {
@@ -99,7 +111,16 @@ input + .form-group {
 }
 
 [type="checkbox"], [type="radio"] {
-  @apply text-primary-500;
+  @apply text-primary-500 cursor-pointer;
+
+  ~ span {
+    @apply cursor-pointer;
+  }
+}
+
+
+[type="radio"] {
+  @apply border mr-2;
 }
 
 [type="checkbox"] {
@@ -109,3 +130,44 @@ input + .form-group {
 .form-check-label {
   @apply flex flex-row items-baseline;
 }
+
+/* Position here above .file-upload-container is important to use the cascade. */
+.file-upload-fake--hidden {
+  display: none;
+}
+
+.file-upload-container {
+  position: relative;
+
+  .input {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    height: calc(100% - 24px);
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+
+  .file-upload-fake {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+
+    > :first-child {
+      border: 1px solid gray;
+      border-radius: 3px;
+      padding: 0.25rem 1rem;
+      user-select: none;
+      color: gray;
+    }
+  }
+}
+
