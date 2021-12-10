@@ -1,7 +1,7 @@
 {
   "name": "rintisch/tailwindcss-form",
   "type": "typo3-cms-extension",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Adapt output of EXT:form for usage with tailwindcs",
   "homepage": "https://github.com/rintisch/",
   "license": [
