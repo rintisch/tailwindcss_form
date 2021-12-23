@@ -9,8 +9,8 @@ $EM_CONF[$_EXTKEY] = [
     'category' => 'fe',
     'constraints' => [
         'depends' => [
-            'typo3' => '10.2.0-10.4.99',
-            'form' => '10.2.0-10.4.99',
+            'typo3' => '10.4.0-11.5.99',
+            'form' => '10.4.0-11.5.99',
         ],
         'conflicts' => [
         ],
@@ -27,5 +27,5 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Gerald Rintisch',
     'author_email' => 'gerald.rintisch@posteo.de',
     'author_company' => 'Rintisch',
-    'version' => '1.2.0',
+    'version' => '1.3.0',
 ];
